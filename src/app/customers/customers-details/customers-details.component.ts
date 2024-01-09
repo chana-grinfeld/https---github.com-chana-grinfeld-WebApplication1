@@ -14,7 +14,7 @@ export class CustomersDetailsComponent implements OnInit {
 
   constructor(private customersService: CustomersService, private router: Router) { }
 
-  displayedColumns: string[] = ['name', 'customerNumber'];
+  displayedColumns: string[] = ['nameFull', 'customerNumber'];
   dataSource: any;
 
   ngOnInit(): void {

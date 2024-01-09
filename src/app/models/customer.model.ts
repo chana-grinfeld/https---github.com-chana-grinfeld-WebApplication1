@@ -2,7 +2,7 @@ import { Contact } from "./contact.model";
 
 export interface Customer {
   id: number;
-  name: string;
+  nameFull: string;
   customerNumber: number;
   city: string;
   street: string;

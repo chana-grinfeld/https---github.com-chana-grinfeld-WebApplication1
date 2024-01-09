@@ -10,7 +10,6 @@ import { CustomersService } from 'src/app/services/customers.service';
 export class CustomerDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private customersService: CustomersService, private router: Router) { }
-
   customer: any;
   isShow: boolean = true;
   customerNumNoValid: boolean = false;
@@ -28,7 +27,7 @@ export class CustomerDetailsComponent implements OnInit {
         else
           this.customer = {
             id: null,
-            name: '',
+            nameFull: '',
             customerNumber: null,
             city: '',
             street: '',

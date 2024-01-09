@@ -5,9 +5,9 @@
     </div>
     <div style="width: 80%; margin: 0 10%;">
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-            <ng-container matColumnDef="name">
+            <ng-container matColumnDef="nameFull">
                 <th mat-header-cell *matHeaderCellDef> שם </th>
-                <td mat-cell *matCellDef="let element" style="cursor: pointer;" (click)="showCustomerDetails(element.customerNumber)"> {{element.name}} </td>
+                <td mat-cell *matCellDef="let element" style="cursor: pointer;" (click)="showCustomerDetails(element.customerNumber)"> {{element.nameFull}} </td>
             </ng-container>
 
             <ng-container matColumnDef="customerNumber">

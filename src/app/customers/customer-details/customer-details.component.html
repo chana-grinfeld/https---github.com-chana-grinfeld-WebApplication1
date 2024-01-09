@@ -2,11 +2,11 @@
     <p style="text-align: center; font-size: x-large; font-weight: bold; margin-bottom: 2rem; margin-top: 2rem;">פרטי לקוח</p>
     <form name="form" (ngSubmit)="f.form.valid && save()" #f="ngForm" novalidate>
         <div style="display: inline-grid; width: 45%;" class="form-group">
-            <label for="name">שם</label>
+            <label for="nameFull">שם</label>
             <mat-form-field>
-                <input matInput style="direction: rtl; text-align: right;" type="text" name="name" class="form-control"
-                    [(ngModel)]="customer.name" #name="ngModel" [disabled]="isShow" required />
-                <mat-error *ngIf="f.submitted && !name.valid" style="text-align: right;">שם הלקוח הינו
+                <input matInput style="direction: rtl; text-align: right;" type="text" name="nameFull" class="form-control"
+                    [(ngModel)]="customer.nameFull" #nameFull="ngModel" [disabled]="isShow" required />
+                <mat-error *ngIf="f.submitted && !nameFull.valid" style="text-align: right;">שם הלקוח הינו
                     חובה</mat-error>
             </mat-form-field>
         </div>
@@ -66,8 +66,9 @@
                     <input matInput style="direction: rtl; text-align: right;" type="text" name="contactEmail"
                         class="form-control" [(ngModel)]="contact.email" #contactEmail="ngModel" [disabled]="isShow" />
                 </mat-form-field>
-            </div>
+            </div> 
         </div>
+
         <button *ngIf="!isShow" style="float: left; left: 4%; width: 10%;" 
         mat-raised-button color="primary" type="submit">שמור</button>
     </form>
